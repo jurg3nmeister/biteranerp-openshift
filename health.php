@@ -5,16 +5,17 @@ $username = getenv("DATABASE_USER");
 $password = getenv("DATABASE_PASSWORD");
 
 // Create connection
-//$conn = new mysqli($servername, $username, $password);
+$conn_string = "host=".$servername." user=".$username." password=".$password."";
+$connection = pg_connect($conn_string);
 
 // Check connection
-//if ($conn->connect_error) {
-//  header("HTTP/1.1 503 Service Unavailable");
-//  die("Connection failed: " . $conn->connect_error);
-//}else{
-  echo "OK \n";
-  echo $servername."\n";
-  echo $username."\n";
-  echo $password;
-//}
+if($connection) {   
+  	echo "OK \n";
+  	echo $servername."\n";
+  	echo $username."\n";
+  	echo $password;
+}else{
+	header("HTTP/1.1 503 Service Unavailable");
+  	die("Connection failed: " . $connection);
+}
 ?>
