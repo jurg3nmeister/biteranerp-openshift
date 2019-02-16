@@ -6,7 +6,7 @@ $username = getenv("DATABASE_USER");
 $password = getenv("DATABASE_PASSWORD");
 
 // Create connection
-$conn_string = "host=".$servername." dbname=".$$dbname." user=".$username." password=".$password."";
+$conn_string = "host=".$servername." dbname=biteranerp user=".$username." password=".$password."";
 echo $conn_string;
 //$connection = pg_connect($conn_string);
 
