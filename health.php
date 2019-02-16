@@ -1,7 +1,7 @@
 <?php
 
 $servername = getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST");
-$dbname = getenv("DATABASE_NAME");
+$dbname = "biteranerp";
 $username = getenv("DATABASE_USER");
 $password = getenv("DATABASE_PASSWORD");
 
